@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pedido</title>
+
+    <style>
+
+        body{
+            background-color: blueviolet;
+        }
+        .painel{
+            margin: auto;
+            background-color: white;
+             width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+          padding-top: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        #Sim{
+            height: 40px;
+            width: 60px;
+            background-color: blueviolet;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: -50px;
+         }
+        #Nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: blueviolet;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+        }
+        
+     
+
+    </style>
+</head>
+<body>
+
+    <div class="painel">
+        <h1>Me deixa fazer parte da sua vida?</h1>
+        <img src="https://media.tenor.com/eDMc6uyLmDoAAAAM/shakilfreefire.gif" alt="">
+        <h2>tenta dizer que não hahaha</h2>
+
+        <a href="https://paraele01.vercel.app/"><button id="Sim">Sim</button></a>
+        <button onmouseover="fuja()" id="Nao">Nao </button>
+
+       
+    <audio src="sound/ytmp3free (mp3cut.net).mp3" autoplay></audio>
+
+
+    </div>
+
+   <script>
+    function fuja(){
+        var botaoNao = document.getElementById("Nao")
+
+        var largurajanela = window.innerWidth;
+        var alturajanela = window.innerHeight;
+        
+        var MaxX = largurajanela - botaoNao.offsetWidth;
+        var MaxY = alturajanela - botaoNao.offsetHeight;
+
+        var aleatorioX = Math.floor(Math.random() * MaxX);
+        var aleatorioY = Math.floor(Math.random() * MaxY);
+
+        botaoNao.style.left = aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px";
+    }
+   </script>
+    
+</body>
+</html>
+
